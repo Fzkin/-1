@@ -12,31 +12,31 @@ intern -- 为给定的需要适配处理的文件目录
 ![Image text](https://github.com/Fzkin/-1/blob/master/img/4.png)  
 
 #使用包  
-from xml.dom.minidom import parse  
-import xml.dom.minidom  
+>from xml.dom.minidom import parse  
+>import xml.dom.minidom  
 
 # 使用minidom解析器打开 XML 文档  
-DOMTree = xml.dom.minidom.parse(xml)  
-collection = DOMTree.documentElement  
+>DOMTree = xml.dom.minidom.parse(xml)  
+>collection = DOMTree.documentElement  
 
 #获取选中信息  
-#一级目录  
-filename = collection.getElementsByTagName("filename")[0].childNodes[0].data  
-#二级目录  
-width = collection.getElementsByTagName("size")[0].getElementsByTagName('width')[0].childNodes[0].data  
-height = collection.getElementsByTagName("size")[0].getElementsByTagName('height')[0].childNodes[0].data  
-depth =  collection.getElementsByTagName("size")[0].getElementsByTagName('depth')[0].childNodes[0].data  
+>#一级目录  
+>filename = collection.getElementsByTagName("filename")[0].childNodes[0].data  
+>#二级目录  
+>width = collection.getElementsByTagName("size")[0].getElementsByTagName('width')[0].childNodes[0].data  
+>height = collection.getElementsByTagName("size")[0].getElementsByTagName('height')[0].childNodes[0].data  
+>depth =  collection.getElementsByTagName("size")[0].getElementsByTagName('depth')[0].childNodes[0].data  
   
 
 # object 处理  
-anotations = []  
-anotation = {}  
-#获取所有object集合  
-objs = collection.getElementsByTagName("object")  
-#逐个获取，填入字典  
-for obj in objs:  
+>anotations = []  
+>anotation = {}  
+>#获取所有object集合  
+>objs = collection.getElementsByTagName("object")  
+>#逐个获取，填入字典  
+>for obj in objs:  
 >dif = obj.getElementsByTagName("difficult")[0].childNodes[0].data  
-        nm =  obj.getElementsByTagName("name")[0].childNodes[0].data  
+>>nm =  obj.getElementsByTagName("name")[0].childNodes[0].data  
         bdbox =  obj.getElementsByTagName("bndbox")[0]  
         x = bdbox.getElementsByTagName('xmin')[0].childNodes[0].data  
         y = bdbox.getElementsByTagName("ymin")[0].childNodes[0].data  

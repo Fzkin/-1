@@ -35,7 +35,7 @@ anotation = {}
 objs = collection.getElementsByTagName("object")  
 #逐个获取，填入字典  
 for obj in objs:  
-	dif = obj.getElementsByTagName("difficult")[0].childNodes[0].data  
+>dif = obj.getElementsByTagName("difficult")[0].childNodes[0].data  
         nm =  obj.getElementsByTagName("name")[0].childNodes[0].data  
         bdbox =  obj.getElementsByTagName("bndbox")[0]  
         x = bdbox.getElementsByTagName('xmin')[0].childNodes[0].data  

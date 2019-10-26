@@ -57,10 +57,12 @@ intern -- 为给定的需要适配处理的文件目录
 >>>>xmls.append(fi)  
 >>>>try:  
 >>>>>rel = parse_xml(fi)  
->>>>>result.append(rel)  
+>>>>>result.append(rel)
+>#
 >>>>except :  
 >>>>>err.append(fi)  
->>>>>continue  
+>>>>>continue 
+>#
 >with open("./result.csv" , "w") as f:  
 >>for i in result:  
 >>>f.write("{}".format(i))  
